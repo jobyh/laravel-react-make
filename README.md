@@ -1,5 +1,5 @@
 # laravel-react-make
-[![Build Status](https://travis-ci.com/77gears/laravel-react-make.svg?branch=master)](https://travis-ci.com/77gears/laravel-react-make)
+[![Build Status](https://travis-ci.com/jobyh/laravel-react-make.svg?branch=main)](https://travis-ci.com/jobyh/laravel-react-make)
 
 Artisan generator for React function and class components. Supports Laravel 7, 6 &amp; 5.8.
 
@@ -7,7 +7,7 @@ Artisan generator for React function and class components. Supports Laravel 7, 6
 
 ```
 % cd /path/to/laravel/project
-% composer require --dev 77gears/laravel-react-make
+% composer require --dev jobyh/laravel-react-make
 ```
 
 ### Customise Stubs

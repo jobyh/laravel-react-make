@@ -1,8 +1,8 @@
 {
-  "name": "77gears/laravel-react-make",
+  "name": "Jobyh/laravel-react-make",
   "description": "Artisan command to generate React components",
   "keywords": [
-    "77gears",
+    "Jobyh",
     "laravel",
     "react",
     "artisan",
@@ -12,12 +12,12 @@
   "authors": [
     {
       "name": "Joby Harding",
-      "email": "joby@77gears.com"
+      "email": "joby@jobyharding.com"
     }
   ],
   "autoload": {
     "psr-4": {
-      "_77Gears_\\ReactMake\\": "src"
+      "Jobyh\\ReactMake\\": "src"
     }
   },
   "minimum-stability": "dev",
@@ -28,7 +28,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "_77Gears_\\ReactMake\\Support\\CommandsProvider"
+        "Jobyh\\ReactMake\\Support\\CommandsProvider"
       ]
     }
   },

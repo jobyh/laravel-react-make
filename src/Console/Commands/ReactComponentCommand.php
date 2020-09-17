@@ -1,6 +1,6 @@
 <?php
 
-namespace _77Gears_\ReactMake\Console\Commands;
+namespace Jobyh\ReactMake\Console\Commands;
 
 use Illuminate\Console\Command;
 use Illuminate\Filesystem\Filesystem;
