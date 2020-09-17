@@ -1,7 +1,7 @@
 # laravel-react-make
 [![Build Status](https://travis-ci.com/jobyh/laravel-react-make.svg?branch=main)](https://travis-ci.com/jobyh/laravel-react-make)
 
-Artisan generator for React function and class components. Supports Laravel 7, 6 &amp; 5.8.
+Artisan generator for React function and class components. Supports Laravel 8, 7 and 6.
 
 ## Quick start
 
@@ -12,7 +12,7 @@ Artisan generator for React function and class components. Supports Laravel 7, 6
 
 ### Customise Stubs
 
-Publishing stubs in Laravel 7 is a [great feature](https://laravel.com/docs/7.x/artisan#stub-customization).
+Publishing stubs in Laravel is a [great feature](https://laravel.com/docs/8.x/artisan#stub-customization).
 Yes please.
 
 ```
