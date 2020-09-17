@@ -38,10 +38,7 @@ class ReactComponentCommand extends Command
 
     protected function getPath(string $name) : string
     {
-        $subDir = $this->option('dir')
-            ? "{$this->option('dir')}/"
-            : '';
-        return App::resourcePath("js/components/{$subDir}{$name}.{$this->getExtension()}");
+        return App::resourcePath("js/components/{$name}.{$this->getExtension()}");
     }
 
     protected function getExtension() : string {
