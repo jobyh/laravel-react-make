@@ -1,9 +1,9 @@
 <?php
 
-namespace _77Gears_\ReactMake\Support;
+namespace Jobyh\ReactMake\Support;
 
 use Illuminate\Support\ServiceProvider;
-use _77Gears_\ReactMake\Console\Commands\ReactComponentCommand;
+use Jobyh\ReactMake\Console\Commands\ReactComponentCommand;
 
 class CommandsProvider extends ServiceProvider
 {
