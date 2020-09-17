@@ -24,26 +24,26 @@ Yes please.
 Generate a React function component:
 
 ```
-% php artisan react:component MyComponent
+% php artisan make:react MyComponent
 # -> resources/js/components/MyComponent.js
 ```
 
 Generate under a subdirectory (short version `-d` is also available):
 
 ```
-% php artisan react:component --dir='foo/bar' MyComponent
+% php artisan make:react --dir='foo/bar' MyComponent
 # -> resources/js/components/foo/bar/MyComponent.js
 ```
 
 Use `.jsx` file extension (short version `-x` is also available)
 
 ```
-% php artisan react:component --jsx MyComponent
+% php artisan make:react --jsx MyComponent
 # -> resources/js/components/MyComponent.jsx
 ```
 
 Generate a class based component (short version `-c` is also available)
 ```
-% php artisan react:component --class MyComponent
+% php artisan make:react --class MyComponent
 # -> resources/js/components/MyComponent.js
 ```
