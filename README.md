@@ -28,10 +28,10 @@ Generate a React function component:
 # -> resources/js/components/MyComponent.js
 ```
 
-Generate under a subdirectory (short version `-d` is also available):
+Generate under a subdirectory:
 
 ```
-% php artisan make:react --dir='foo/bar' MyComponent
+% php artisan make:react foo/bar/MyComponent
 # -> resources/js/components/foo/bar/MyComponent.js
 ```
 

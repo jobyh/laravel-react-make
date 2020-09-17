@@ -68,7 +68,7 @@ class ReactComponentCommandTest extends TestCase {
                 ->andReturn(true);
         });
 
-        $result = Artisan::call('make:react', ['name' => 'TestComponent', '--dir' => 'foo/bar']);
+        $result = Artisan::call('make:react', ['name' => 'foo/bar/TestComponent']);
         $this->assertSame(0, $result);
     }
 
