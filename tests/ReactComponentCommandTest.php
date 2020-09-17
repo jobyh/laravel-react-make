@@ -18,7 +18,7 @@ class ReactComponentCommandTest extends TestCase {
     {
         $this->expectErrorMessage('missing: "name"');
 
-        Artisan::call('react:component');
+        Artisan::call('make:react');
     }
 
     public function test_it_checks_if_component_already_exists()
@@ -44,7 +44,7 @@ class ReactComponentCommandTest extends TestCase {
             $mock->shouldReceive('exists')->once();
         });
 
-        $result = Artisan::call('react:component', ['name' => 'TestComponent']);
+        $result = Artisan::call('make:react', ['name' => 'TestComponent']);
         $this->assertSame(0, $result);
     }
 
@@ -68,7 +68,7 @@ class ReactComponentCommandTest extends TestCase {
                 ->andReturn(true);
         });
 
-        $result = Artisan::call('react:component', ['name' => 'TestComponent', '--dir' => 'foo/bar']);
+        $result = Artisan::call('make:react', ['name' => 'TestComponent', '--dir' => 'foo/bar']);
         $this->assertSame(0, $result);
     }
 
@@ -87,7 +87,7 @@ class ReactComponentCommandTest extends TestCase {
                 ->once();
         });
 
-        $result = Artisan::call('react:component', ['name' => 'TestComponent']);
+        $result = Artisan::call('make:react', ['name' => 'TestComponent']);
         $this->assertSame(0, $result);
     }
 
@@ -106,7 +106,7 @@ class ReactComponentCommandTest extends TestCase {
                 ->once();
         });
 
-        $result = Artisan::call('react:component', ['name' => 'TestComponent']);
+        $result = Artisan::call('make:react', ['name' => 'TestComponent']);
         $this->assertSame(0, $result);
     }
 
@@ -125,7 +125,7 @@ class ReactComponentCommandTest extends TestCase {
                 ->once();
         });
 
-        $result = Artisan::call('react:component', ['name' => 'TestComponent', '--jsx' => true]);
+        $result = Artisan::call('make:react', ['name' => 'TestComponent', '--jsx' => true]);
         $this->assertSame(0, $result);
     }
 
@@ -138,7 +138,7 @@ class ReactComponentCommandTest extends TestCase {
         File::makeDirectory(dirname($stubPath));
         File::put($stubPath, 'Overridden stub');
 
-        $result = Artisan::call('react:component', ['name' => 'TestComponent']);
+        $result = Artisan::call('make:react', ['name' => 'TestComponent']);
 
         $this->assertSame(0, $result);
         $this->assertSame('Overridden stub', File::get(resource_path('js/components/TestComponent.js')));
@@ -176,7 +176,7 @@ class ReactComponentCommandTest extends TestCase {
                 ->once();
         });
 
-        $result = Artisan::call('react:component', ['name' => 'TestComponent', '--class' => true]);
+        $result = Artisan::call('make:react', ['name' => 'TestComponent', '--class' => true]);
 
         $this->assertSame(0, $result);
     }
