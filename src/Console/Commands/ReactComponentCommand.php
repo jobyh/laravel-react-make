@@ -13,7 +13,12 @@ class ReactComponentCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'make:react {name} {--x|jsx} {--d|dir=} {--c|class}';
+    protected $signature = <<<TEXT
+make:react
+    {name : The name of the React component}
+    {--x|jsx : Use .jsx file extension}
+    {--c|class : Create a class-based React component}
+TEXT;
 
     /**
      * The console command description.
