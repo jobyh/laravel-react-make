@@ -180,4 +180,10 @@ class ReactComponentCommandTest extends TestCase {
 
         $this->assertSame(0, $result);
     }
+
+    public function test_it_correctly_names_component()
+    {
+        // Currently the generated component incorrectly includes the directory path.
+        $this->markTestIncomplete();
+    }
 }
