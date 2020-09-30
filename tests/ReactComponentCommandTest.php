@@ -196,8 +196,7 @@ class ReactComponentCommandTest extends TestCase {
                 ->once();
         });
 
-        $command = $this->artisan('make:react', ['name' => 'sub/dir/TestComponent']);
-        $command->execute();
-        $command->assertExitCode(0);
+        $result = Artisan::call('make:react', ['name' => 'sub/dir/TestComponent']);
+        $this->assertSame(0, $result);
     }
 }
