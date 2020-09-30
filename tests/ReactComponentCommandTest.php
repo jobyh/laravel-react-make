@@ -181,9 +181,23 @@ class ReactComponentCommandTest extends TestCase {
         $this->assertSame(0, $result);
     }
 
-    public function test_it_correctly_names_component()
+    public function test_it_correctly_replaces_dummy_component()
     {
-        // Currently the generated component incorrectly includes the directory path.
-        $this->markTestIncomplete();
+        $this->mock(Filesystem::class, function(MockInterface $mock) {
+            // Stubs.
+            $mock->allows([
+                'exists' => false,
+                'isDirectory' => true,
+                'get' => 'DummyComponent',
+            ]);
+
+            $mock->shouldReceive('put')
+                ->withArgs([resource_path('js/components/sub/dir/TestComponent.js'), 'TestComponent'])
+                ->once();
+        });
+
+        $command = $this->artisan('make:react', ['name' => 'sub/dir/TestComponent']);
+        $command->execute();
+        $command->assertExitCode(0);
     }
 }

@@ -43,7 +43,8 @@ TEXT;
 
     protected function getPath(string $name) : string
     {
-        return App::resourcePath("js/components/{$name}.{$this->getExtension()}");
+        $relative = join(DIRECTORY_SEPARATOR, ['js', 'components', "$name.{$this->getExtension()}"]);
+        return App::resourcePath($relative);
     }
 
     protected function getExtension() : string {
@@ -63,7 +64,7 @@ TEXT;
             return $override;
         }
 
-        return realpath(__DIR__ . "/../../../stubs/{$stub}");
+        return realpath(join(DIRECTORY_SEPARATOR, [__DIR__, '..', '..', '..', 'stubs', $stub]));
     }
 
     protected function makeDirectory(string $path) : string
@@ -81,7 +82,7 @@ TEXT;
     {
         $stub = $this->files->get($this->getStub()) ;
 
-        return str_replace('DummyComponent', $name, $stub);
+        return str_replace('DummyComponent', basename($name), $stub);
     }
 
     /**
